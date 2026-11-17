@@ -30,6 +30,7 @@ jobs:
       - name: Build x86
         shell: msys2 {0}
         run: |
+          export PATH=/mingw32/bin:$PATH
           i686-w64-mingw32-g++ -std=c++17 -O2 -Wall -Wextra launcher.cpp -o PCGameLauncher-x86.exe -mwindows -lcomdlg32 -lshell32
 
       - name: Upload Windows builds
