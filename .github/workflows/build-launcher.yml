@@ -25,7 +25,7 @@ jobs:
       - name: Build x64
         shell: msys2 {0}
         run: |
-          g++ -std=c++17 -O2 -Wall -Wextra -municode=false launcher.cpp -o PCGameLauncher-x64.exe -mwindows -lcomdlg32 -lshell32
+          g++ -std=c++17 -O2 -Wall -Wextra launcher.cpp -o PCGameLauncher-x64.exe -mwindows -lcomdlg32 -lshell32
 
       - name: Build x86
         shell: msys2 {0}
